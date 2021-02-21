@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="default.css">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,900;1,400;1,900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+<!--NAVEGATOR-->
+	<div id="top">
+		<div id="divlogo"><img src="img/logo1.jpeg" id="logo"></div>
+		<div class="nav">
+			<a href="">HOME</a>
+			<a href="">SOBRE</a>
+			<a href="">CONTATO</a>
+		</div>
+		<br><br><br>
+	</div>
+<!--PASSADOR DE FOTOS1-->
+	<div class="slideshow-container">
+		<div class="bottomcarrossel">
+		  <span class="dot" onclick="currentSlide(1)"></span> 
+		  <span class="dot" onclick="currentSlide(2)"></span> 
+		  <span class="dot" onclick="currentSlide(3)"></span> 
+		</div>
+		<div class="mySlides fade">
+  			<div id="foto1"></div>
+		</div>
+		<div class="mySlides fade" style="width:2100px background-size: cover;">
+			<div id="foto2"></div>
+		</div>
+		<div class="mySlides fade">
+		 	<div id="foto3"></div>
+		</div>
+		<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+		<a class="next" onclick="plusSlides(1)">&#10095;</a>
+	</div>
+<!--NEWS-->
+<!--	<div id="NEWS">
+		<div class="cabecalho"><h1>ACONTECE NA IBCI</h1></div>
+		<p>Ipsum fermentum himenaeos habitant ante tempor potenti porta tristique duis potenti, fringilla hendrerit commodo aliquet euismod purus vestibulum aliquam feugiat. consequat luctus donec sociosqu torquent lacus quam egestas nunc amet taciti, condimentum fames nisl dictumst habitasse maecenas himenaeos lacinia tempor, posuere sodales ornare commodo convallis maecenas vel felis sociosqu. per in sollicitudin ornare leo felis eleifend, dictumst risus imperdiet consectetur quis, metus a pellentesque euismod urna. nullam suscipit fusce posuere faucibus scelerisque rutrum ad odio, placerat justo interdum fusce ornare tempus mi. et mollis aenean molestie elit id maecenas fringilla convallis condimentum, habitant cursus accumsan posuere ultricies tristique ad leo imperdiet, nostra ultrices curabitur sollicitudin primis tortor sed porttitor. 
+		</p>
+	</div>	-->
+<!--OFERTA-->
+	<div >
+		<div class="ofertaimg"><img src="img/donation.png"></div>
+		<div class="cabecalho"> <h1>CONTRIBUIÇÃO</h1></div>
+		<div class="texto2">
+			<p>Ser generoso é colocar o amor em ação. "Mais bem-aventurado é dar do que receber" (At 20.35).</p>
+			<p>Conﬁra em quais bancos você pode depositar seus dízimos e suas ofertas.</p>
+		</div>
+		<span></span>
+	</div>
+	
+
+	<script>
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+	  showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+	  showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+	  var i;
+	  var slides = document.getElementsByClassName("mySlides");
+	  var dots = document.getElementsByClassName("dot");
+	  if (n > slides.length) {slideIndex = 1}    
+	  if (n < 1) {slideIndex = slides.length}
+	  for (i = 0; i < slides.length; i++) {
+	      slides[i].style.display = "none";  
+	  }
+	  for (i = 0; i < dots.length; i++) {
+	      dots[i].className = dots[i].className.replace(" active", "");
+	  }
+	  slides[slideIndex-1].style.display = "block";  
+	  dots[slideIndex-1].className += " active";
+	}
+	</script>
+	<!--PASSADOR DE FOTOS1 FIM-->
+</body>
+</html>
